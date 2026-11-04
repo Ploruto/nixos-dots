@@ -31,6 +31,7 @@ in
         imports = [
           modules.homeManager.hyprland
           modules.homeManager.terminal
+          modules.homeManager.neovim
           modules.homeManager.browser
           modules.homeManager.session
           modules.homeManager.shell

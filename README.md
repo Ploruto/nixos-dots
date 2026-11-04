@@ -45,8 +45,9 @@ other applications keep their own font settings. The bar uses
 `desktop.fonts.barFamily` (Noto Sans), while the shell and lock screen use
 `desktop.fonts.interfaceFamily` (Sans Serif).
 
-Neovim is currently installed by the host configuration; no editor configuration
-is managed yet.
+Neovim is managed by Home Manager in `modules/neovim/`, with ordinary Lua
+configuration beside the Nix module. See [the editor guide](modules/neovim/README.md)
+for the complete plugin list, keybindings, and language support.
 
 Edit `hosts/laptop/desktop.nix`, for example:
 

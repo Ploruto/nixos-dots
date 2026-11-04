@@ -22,6 +22,7 @@
         ./modules/desktop.nix
         ./modules/hyprland.nix
         ./modules/terminal.nix
+        ./modules/neovim
         ./modules/browser.nix
         ./modules/session.nix
         ./modules/shell.nix
