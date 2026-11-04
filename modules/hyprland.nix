@@ -198,7 +198,7 @@ in
           output = "";
           mode = "preferred";
           position = "auto";
-          scale = "auto";
+          scale = d.display.scale;
         };
         config = {
           general = {

@@ -33,7 +33,7 @@ in
       enable = true;
       font = {
         name = d.fonts.family;
-        size = d.fonts.sizes.terminal;
+        size = d.fonts.effectiveSizes.terminal;
       };
       settings = {
         shell = "${pkgs.tmux}/bin/tmux new-session -A -s main";

@@ -71,6 +71,22 @@ in
         error = palette.red;
       };
     };
+    display.scale = mkOption {
+      type = types.either (types.enum [ "auto" ]) size;
+      default = "auto";
+      description = "Hyprland monitor scale: auto or a positive multiplier. Scales the entire desktop.";
+    };
+    fonts.scale = mkOption {
+      type = size;
+      default = 1.0;
+      description = "Font multiplier for the terminal, shell and lock screen; does not change application-wide font settings.";
+    };
+    fonts.effectiveSizes = mkOption {
+      type = types.attrsOf size;
+      readOnly = true;
+      default = lib.mapAttrs (_: value: value * config.desktop.fonts.scale) config.desktop.fonts.sizes;
+      description = "Computed font sizes after applying fonts.scale. Set fonts.sizes to change the base sizes.";
+    };
     fonts.barFamily = mkOption {
       type = types.str;
       default = "Noto Sans";

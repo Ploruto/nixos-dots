@@ -38,7 +38,26 @@ retained as ordinary NixOS modules during this migration.
 
 ## Shared typography and theme
 
-All font sizes are **points**. Display scaling is a separate Hyprland setting.
+Base font sizes are **points**. Set the two independent multipliers in
+`hosts/laptop/desktop.nix`:
+
+```nix
+desktop.display.scale = "auto"; # Or 1.5, 2.0, etc.; all connected monitors.
+desktop.fonts.scale = 1.0;      # 1.1 makes our text 10% larger.
+```
+
+Display scale changes the entire desktop, including text, borders and padding.
+Font scale multiplies the base `desktop.fonts.sizes` for Kitty (including tmux
+and terminal Neovim), the shell and the lock screen. It does not alter Firefox
+or file-manager fonts, or fixed border/padding sizes. Both multipliers combine:
+text is affected by display scale as well as font scale. Lock-screen font sizes
+are rounded to whole points. The defaults preserve the existing appearance.
+Very large fonts can require a larger `desktop.geometry.barHeight` or `rowHeight`.
+Changes apply on the usual rebuild/switch; restart Kitty for its font changes.
+The lock screen uses the new sizes the next time it starts. Hyprland reloads
+monitor settings when its config reloads.
+
+
 Maple Mono NF is installed system-wide. Terminal Neovim inherits Kitty's font;
 tmux inherits the terminal font too. Maple Mono is selected only for the terminal;
 other applications keep their own font settings. The bar uses

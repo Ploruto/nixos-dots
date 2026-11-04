@@ -2,6 +2,9 @@
 { ... }:
 {
   desktop = {
+    # Display scale changes the entire desktop; font scale changes only our text.
+    display.scale = "auto";
+    fonts.scale = 1.0;
     wallpaper = ../../images/saitama-background.png;
     shell.bar = {
       position = "bottom";

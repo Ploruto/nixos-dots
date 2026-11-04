@@ -111,7 +111,9 @@ in
             readonly property var settings: (${
               builtins.toJSON {
                 colors = d.theme.colors;
-                fonts = d.fonts;
+                fonts = d.fonts // {
+                  sizes = d.fonts.effectiveSizes;
+                };
                 geometry = d.geometry;
                 bar = d.shell.bar;
                 wallpaper = if d.wallpaper == null then "" else "file://${d.wallpaper}";

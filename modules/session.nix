@@ -326,7 +326,7 @@ in
               monitor = "";
               text = "$USER";
               font_family = d.fonts.interfaceFamily;
-              font_size = d.fonts.sizes.heading;
+              font_size = builtins.floor (d.fonts.effectiveSizes.heading + 0.5);
               color = hex d.theme.colors.text;
               position = "0, 70";
             }
