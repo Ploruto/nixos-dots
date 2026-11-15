@@ -4,3 +4,6 @@ result-*
 *.swp
 *.swo
 .direnv/
+/.aws/
+/.codex/
+/.agents/

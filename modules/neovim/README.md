@@ -6,11 +6,14 @@ NixOS rebuild, then restart Neovim.
 
 ## Plugins
 
-- Catppuccin: Mocha theme.
+- A small built-in colorscheme generated from Noctalia's current wallpaper palette.
+  Changing wallpapers refreshes open Neovim instances.
 - nvim-lspconfig: language-server definitions (the LSP client is built into Neovim).
 - which-key: delayed shortcut hints and named groups.
 - Telescope: file/text/buffer/help/keybinding search; Plenary is its dependency.
 - Gitsigns: changed-line markers, hunk navigation/preview and line blame.
+- Tree-sitter parsers for C, C++, and Verilog/SystemVerilog; Typst CLI and
+  Tinymist language server are installed.
 
 `init.lua` lists each Lua module in loading order. General mappings live in
 `keymaps.lua`; plugin and LSP mappings live beside their configuration.
@@ -53,12 +56,6 @@ Nix uses nil with nixfmt; Lua uses lua-language-server and StyLua. nil provides
 language navigation/diagnostics, but this setup does not yet evaluate NixOS or
 Home Manager options to provide option-aware completion.
 
-For C/C++ we can add clangd to the Nix package list and enable its LSP config.
-Use a project development shell for the compiler and libraries. clangd needs
-accurate build commands: CMake can generate them with
-`cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON`; other builds can use
-Bear. Keep project dependencies and build flags in the project.
-
-Debugging is a separate future addition: nvim-dap plus an adapter such as
-lldb-dap, with a launch configuration pointing at a binary built with debug
-symbols. Neither C/C++ tooling nor debugger plugins are installed here yet.
+Typst uses Tinymist, C/C++ uses clangd, and Rust uses rust-analyzer.
+For C/C++ projects, provide a `compile_commands.json` with the project's build
+flags and include paths. Debugger plugins are not configured.

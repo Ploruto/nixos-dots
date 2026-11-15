@@ -49,4 +49,7 @@ vim.lsp.config("lua_ls", {
     },
   },
 })
-vim.lsp.enable({ "nil_ls", "lua_ls" })
+vim.lsp.config("tinymist", {})
+vim.lsp.config("clangd", {})
+vim.lsp.config("rust_analyzer", {})
+vim.lsp.enable({ "nil_ls", "lua_ls", "tinymist", "clangd", "rust_analyzer" })
