@@ -21,6 +21,7 @@ in
   home.packages = with pkgs; [
     unstable.devenv
     just
+    gnumake
     rustc
     cargo
     rustfmt

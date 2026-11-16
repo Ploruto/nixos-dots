@@ -60,6 +60,7 @@ in
         ./neovim
         ./browser.nix
         ./thunderbird.nix
+        ./remmina.nix
       ];
       home = {
         username = "garou";

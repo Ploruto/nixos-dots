@@ -3,7 +3,7 @@
 NixOS 26.05 configuration for my desktop and laptop, using Home Manager,
 Umbriel and Noctalia. Selected packages come from nixos-unstable.
 
-Desktop apps: Firefox, Thunderbird, Spotify, Kitty, Nautilus, imv and
+Desktop apps: Firefox, Thunderbird, Spotify, Remmina, Kitty, Nautilus, imv and
 Antigravity IDE. The desktop bar includes Headroom for Codex and Antigravity
 usage. Wallpapers live in ~/Pictures/Wallpapers.
 
