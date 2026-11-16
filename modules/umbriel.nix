@@ -17,7 +17,7 @@ in
       };
       appearance = {
         prefer_no_csd = true;
-        border_width = 1;
+        border_width = 4;
         corner_radius = 12;
         opaque_fullscreen = true;
         blur = {
@@ -28,7 +28,11 @@ in
         };
       };
       input.keyboard.layout = "us";
-      keybinds = defaults.keybinds // {
+      keybinds = builtins.removeAttrs defaults.keybinds [ "Mod+Q" ] // {
+        "Mod+W" = {
+          action = "window-close";
+          repeat = false;
+        };
         "Mod+Space" = "spawn noctalia msg panel-toggle launcher";
         "Mod+V" = "spawn noctalia msg panel-toggle clipboard";
         "Mod+Shift+L" = "spawn noctalia msg session lock";

@@ -59,6 +59,7 @@ in
         ./development.nix
         ./neovim
         ./browser.nix
+        ./thunderbird.nix
       ];
       home = {
         username = "garou";
@@ -69,6 +70,7 @@ in
           pavucontrol
           wl-clipboard
           libnotify
+          spotify
         ];
       };
       home.pointerCursor = {

@@ -7,6 +7,7 @@ let
   ]);
 in
 {
+  home.shellAliases.n = "nvim";
   programs.neovim = {
     enable = true;
     defaultEditor = true;

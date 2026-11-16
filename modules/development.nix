@@ -7,12 +7,20 @@ let
 in
 {
   programs.gh.enable = true;
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
+    silent = true;
+  };
   programs.mise = {
     enable = true;
     enableBashIntegration = true;
   };
 
   home.packages = with pkgs; [
+    unstable.devenv
+    just
     rustc
     cargo
     rustfmt
