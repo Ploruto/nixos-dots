@@ -48,6 +48,7 @@ in
 
   environment.systemPackages = [
     pkgs.wget
+    pkgs.bubblewrap
     unstable.codex
   ];
 }

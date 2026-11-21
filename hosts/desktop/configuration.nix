@@ -7,6 +7,9 @@
   ];
 
   networking.hostName = "desktop";
+  networking.firewall.allowedTCPPorts = [ 3773 ];
+  virtualisation.docker.enable = true;
+  users.users.garou.extraGroups = [ "docker" ];
   system.stateVersion = "26.05";
   home-manager.users.garou.home.stateVersion = "26.05";
 

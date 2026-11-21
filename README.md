@@ -4,12 +4,12 @@ NixOS 26.05 configuration for my desktop and laptop, using Home Manager,
 Umbriel and Noctalia. Selected packages come from nixos-unstable.
 
 Desktop apps: Firefox, Thunderbird, Spotify, Steam, Prism Launcher, Remmina,
-Kitty, Nautilus, imv, mpv and Antigravity IDE. The desktop bar includes
+Kitty, Nautilus, imv, mpv, Antigravity IDE and T3 Code. The desktop bar includes
 Headroom for Codex and Antigravity usage. Wallpapers live in ~/Pictures/Wallpapers.
 
 Terminal tools: Neovim (also aliased to n), tmux, Git, gh, Codex, Antigravity
-CLI, just, mise, devenv, direnv, zoxide and Starship. Development tools include
-Rust, Cargo, Clippy, rustfmt, rust-analyzer, Clang, CMake, Ninja, Icarus Verilog,
+CLI, T3 Code (`t3`), just, mise, devenv, direnv, zoxide and Starship. Development
+tools include Rust, Cargo, Clippy, rustfmt, rust-analyzer, Clang, CMake, Ninja, Icarus Verilog,
 Verilator, Typst and Tinymist. Direnv loads approved project environments in Bash.
 
 The desktop uses DP-3 at 2560×1440, 144 Hz and 1.5× scaling. The laptop uses

@@ -34,5 +34,6 @@ in
     pkg-config
     unstable.antigravity-cli
     unstable.antigravity-ide
+    unstable.t3code
   ];
 }
