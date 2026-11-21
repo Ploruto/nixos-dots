@@ -41,6 +41,7 @@ in
         "Mod+Alt+N" = "spawn noctalia msg wallpaper-next";
         "Mod+Alt+Shift+N" = "spawn noctalia msg wallpaper-previous";
         "Print" = "spawn noctalia msg screenshot-region";
+        "Alt+Print" = "spawn noctalia msg plugin noctalia/screen_recorder:service all toggle";
       };
       layer_rule = defaults.layer_rule;
       window_rule = defaults.window_rule ++ [

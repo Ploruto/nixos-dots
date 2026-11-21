@@ -44,6 +44,7 @@
     "ram"
     "headroom"
     "notifications"
+    "recorder"
     "session"
   ];
 }

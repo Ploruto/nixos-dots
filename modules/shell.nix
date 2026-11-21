@@ -15,12 +15,23 @@
     directory = "${config.home.homeDirectory}/Pictures/Wallpapers";
   };
   home.file."Pictures/Wallpapers/saitama-background.png".source = ../images/saitama-background.png;
+  home.packages = with pkgs; [
+    gpu-screen-recorder
+    slurp
+  ];
   programs.noctalia = {
     enable = true;
     package = inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.noctalia;
     systemd.enable = true;
     checkConfig = true;
     settings = {
+      plugins.enabled = [ "noctalia/screen_recorder" ];
+      plugin_settings."noctalia/screen_recorder" = {
+        video_source = "portal";
+        directory = "${config.home.homeDirectory}/Videos/Recordings";
+        frame_rate = 60;
+        audio_source = "default_output";
+      };
       accessibility.ui_scale = 1.5;
       shell = {
         font_family = "Inter";
@@ -83,10 +94,12 @@
           "ram"
           "battery"
           "notifications"
+          "recorder"
           "session"
         ];
       };
       widget = {
+        recorder.type = "noctalia/screen_recorder:recorder";
         workspaces = {
           label_source = "name";
           show_labels = true;

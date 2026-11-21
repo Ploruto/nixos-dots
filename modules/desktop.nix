@@ -12,7 +12,6 @@ in
   programs.umbriel = {
     enable = true;
     package = desktopPackages.umbriel;
-    portalPackage = desktopPackages.xdg-desktop-portal-umbriel;
   };
   services.displayManager.noctalia-greeter = {
     enable = true;

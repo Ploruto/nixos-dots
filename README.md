@@ -29,6 +29,7 @@ Core shortcuts:
 - Super+Alt+W: wallpaper picker
 - Super+Shift+L: lock
 - Print: region screenshot
+- Alt+Print: start/stop screen recording
 
 Appearance inspired by [evgen2571/my-nixos](https://github.com/evgen2571/my-nixos)
 and [niii-san/nixos-config](https://github.com/niii-san/nixos-config).
