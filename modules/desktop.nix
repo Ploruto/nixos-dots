@@ -72,6 +72,7 @@ in
           wl-clipboard
           libnotify
           spotify
+          prismlauncher
         ];
       };
       home.pointerCursor = {
@@ -83,6 +84,14 @@ in
       fonts.fontconfig.enable = true;
       xdg.enable = true;
       programs.imv.enable = true;
+      programs.mpv.enable = true;
+      xdg.mimeApps.defaultApplications = {
+        "video/mp4" = [ "mpv.desktop" ];
+        "video/webm" = [ "mpv.desktop" ];
+        "video/x-matroska" = [ "mpv.desktop" ];
+        "video/quicktime" = [ "mpv.desktop" ];
+        "video/x-msvideo" = [ "mpv.desktop" ];
+      };
     };
   };
 }

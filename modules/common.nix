@@ -15,6 +15,8 @@ in
   # Run generic Linux binaries downloaded by IDEs, such as Antigravity's backend.
   programs.nix-ld.enable = true;
 
+  programs.steam.enable = true;
+
   networking.networkmanager.enable = true;
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.UTF-8";

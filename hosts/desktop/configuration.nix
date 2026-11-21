@@ -17,7 +17,10 @@
     mode = "2560x1440@144";
   };
 
-  home-manager.users.garou.home.packages = [ pkgs.libsecret ];
+  home-manager.users.garou.home.packages = [
+    pkgs.libsecret
+    pkgs.blender
+  ];
   home-manager.users.garou.programs.noctalia.settings = {
     plugins.enabled = [ "ayagmar/headroom" ];
     plugin_settings."ayagmar/headroom" = {
