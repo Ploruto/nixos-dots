@@ -19,8 +19,9 @@ in
     plugins = with pkgs.vimPlugins; [
       nvim-lspconfig
       which-key-nvim
-      telescope-nvim
-      plenary-nvim # Telescope dependency.
+      snacks-nvim
+      diffview-nvim
+      nvim-web-devicons
       gitsigns-nvim
       treesitter
     ];
@@ -32,6 +33,7 @@ in
       ripgrep
       fd
       git
+      lazygit
       iverilog
       verilator
       typst

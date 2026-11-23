@@ -34,6 +34,18 @@ in
     pkg-config
     unstable.antigravity-cli
     unstable.antigravity-ide
-    unstable.t3code
+    (unstable.t3code.overrideAttrs (old: {
+      # The native speech worker needs these libraries at runtime.
+      buildCommand = old.buildCommand + ''
+        for program in t3 t3code-desktop; do
+          wrapProgram "$out/bin/$program" --prefix LD_LIBRARY_PATH : ${
+            unstable.lib.makeLibraryPath [
+              unstable.stdenv.cc.cc.lib
+              unstable.vulkan-loader
+            ]
+          }
+        done
+      '';
+    }))
   ];
 }

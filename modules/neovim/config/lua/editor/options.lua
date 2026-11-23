@@ -14,4 +14,4 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.undofile = true
--- Explicit system-clipboard operations use "+y and "+p; normal y/p stay local.
+vim.opt.clipboard = "unnamedplus"
